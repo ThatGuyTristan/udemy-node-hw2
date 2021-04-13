@@ -1,0 +1,12 @@
+include components/header.pug
+
+body
+  include components/top_bar.pug
+  block content
+    title #{pageTitle}
+    main
+      if users.length > 0
+        each user in users
+          h1 #{user.name}
+      else
+        h3 No Data

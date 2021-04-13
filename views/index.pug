@@ -1,0 +1,11 @@
+include components/header.pug
+
+body
+include components/top_bar.pug
+block content
+  h1.main-content #{pageTitle}
+  main
+    form(action="/index/add-user" method="POST")
+      label(for="username") Name
+      input(type="text" name="name" id="Name")
+      button(type="submit") Add User
